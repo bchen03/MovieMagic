@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- https://mdbootstrap.com -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+
+        html {
+            font-size: 16px;
+        }
+
+        .card {
+            width: 430px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .c1 { background: cyan;  }
+        .c2 { background: yellow;  }
+
+        /* Forms */
+               
+        .form-light .font-small {
+            font-size: 0.8rem; }
+          
+          .form-light [type="radio"] + label,
+          .form-light [type="checkbox"] + label {
+            font-size: 0.8rem; }
+          
+          .form-light [type="checkbox"] + label:before {
+            top: 2px;
+            width: 15px;
+            height: 15px; }
+          
+          .form-light input[type="checkbox"] + label:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 17px;
+            height: 17px;
+            z-index: 0;
+            border-radius: 1px;
+            margin-top: 2px;
+            -webkit-transition: 0.2s;
+            transition: 0.2s; }
+          
+          .form-light input[type="checkbox"]:checked + label:before {
+            top: -4px;
+            left: -3px;
+            width: 12px;
+            height: 22px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: transparent #EB3573 #EB3573 transparent;
+            -webkit-transform: rotate(40deg);
+            -ms-transform: rotate(40deg);
+            transform: rotate(40deg);
+            -webkit-backface-visibility: hidden;
+            -webkit-transform-origin: 100% 100%;
+            -ms-transform-origin: 100% 100%;
+            transform-origin: 100% 100%; }
+          
+          .form-light .footer {
+            border-bottom-left-radius: .3rem;
+            border-bottom-right-radius: .3rem; }                      
+
+            /* so checkbox label is properly positioned */
+            .md-form label {
+                position: static;
+            }
+
+
+            .form-simple .font-small {
+            font-size: 0.8rem; }
+
+            .form-simple .header {
+            border-top-left-radius: .3rem;
+            border-top-right-radius: .3rem; }
+
+            .form-simple input[type=text]:focus:not([readonly]) {
+            border-bottom: 1px solid #ff3547;
+            -webkit-box-shadow: 0 1px 0 0 #ff3547;
+            box-shadow: 0 1px 0 0 #ff3547; }
+
+            .form-simple input[type=text]:focus:not([readonly]) + label {
+            color: #4f4f4f; }
+
+            .form-simple input[type=password]:focus:not([readonly]) {
+            border-bottom: 1px solid #ff3547;
+            -webkit-box-shadow: 0 1px 0 0 #ff3547;
+            box-shadow: 0 1px 0 0 #ff3547; }
+
+            .form-simple input[type=password]:focus:not([readonly]) + label {
+            color: #4f4f4f; }
+                
+
+    </style>
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark mdb-color darken-1">
+        
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="#">
+            Tatoo Daddy
+        </a>
+    
+        <!-- Collapse button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+    
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+    
+            </ul>
+            <!-- Links -->
+    
+            <!-- Search form -->
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+        <!-- Collapsible content -->
+    
+    </nav>
+    <!--/.Navbar-->
+
+    <p /><p />
+    
+    <!-- Central Modal Medium Info -->
+    <div>Modal:</div>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#centralModalInfo">
+        Launch modal
+    </button>
+
+    <div class="modal fade" id="centralModalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-notify modal-info" role="document">
+            <!--Content-->
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <p class="heading lead">Lunacy Legends</p>
+    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+    
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim,
+                            ab officiis totam.</p>
+                    </div>
+                </div>
+    
+                <!--Footer-->
+                <div class="modal-footer justify-content-center">
+                    <a type="button" class="btn btn-primary-modal">Get it now <i class="fa fa-diamond ml-1"></i></a>
+                    <a type="button" class="btn btn-outline-secondary-modal waves-effect" data-dismiss="modal">No, thanks</a>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!-- Central Modal Medium Info-->
+
+    <p /><p />
+
+    <div>Bootstrap alert:</div>
+    <div class="alert alert-primary" role="alert">
+            This is a primary alert—check it out!
+          </div>
+
+    <p /><p />
+
+    <div>Bootstrap collapse:</div>
+    <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Link with href
+        </a>
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            Button with data-target
+        </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</p>
+    </div>
+
+    <p /><p />
+    
+
+    <div class="container-fluid">
+        <div>Pagination:</div>
+        <div class="row no-gutters">
+        <div class="col">
+            <nav>
+                <ul class="pagination pagination-sm">
+                <li class="page-item">
+                <a class="page-link" href="#top" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#section1">1</a></li>
+                <li class="page-item"><a class="page-link" href="#section2">2</a></li>
+                <li class="page-item"><a class="page-link" href="#section3">3</a></li>
+                <li class="page-item"><a class="page-link" href="#section4">4</a></li>
+                <li class="page-item"><a class="page-link" href="#section5">5</a></li>
+                <li class="page-item">
+                <a class="page-link" href="#bottom" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                </a>
+                </li>
+            </ul>
+            </nav>
+        </div>
+        </div>
+    </div>
+                     
+        
+    <a name="section1" class="badge badge-pill orange mt-4">This is section #1</a>
+        
+    <div class="container-fluid">
+        <div class="row no-gutters">
+            <div class="col">
+                <span>Buttons:</span>
+                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                <button type="button" class="btn btn-primary">Primary</button>
+            
+                <!-- Default button -->
+                <button type="button" class="btn btn-default">Default</button>
+            
+                <!-- Secondary button -->
+                <button type="button" class="btn btn-secondary">Secondary</button>
+            
+                <!-- Indicates a successful or positive action -->
+                <button type="button" class="btn btn-success">Success</button>
+            
+                <!-- Contextual button for informational alert messages -->
+                <button type="button" class="btn btn-info">Info</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Split button dropdown -->
+    <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                        <span>Dropdowns:</span>
+
+                    <div class="btn-group ml-1">
+                    <button type="button" class="btn btn-danger">Action</button>
+                    <button type="button" class="btn btn-danger dropdown-toggle px-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Separated link</a>
+                    </div>
+
+                    <!-- Small button group -->
+                    <div class="btn-group ml-3">
+                        <button class="btn btn-danger btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Small button
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+            <div>Inputs:</div>
+            <div class="row no-gutters">
+            <div class="col">
+                    <div class="md-form">
+                    <i class="fa fa-envelope prefix"></i>
+                    <input type="email" id="form9" class="form-control validate">
+                    <label for="form9" data-error="wrong" data-success="right">Type your email</label>
+                </div>
+                
+                <div class="md-form">
+                    <i class="fa fa-lock prefix"></i>
+                    <input type="password" id="form10" class="form-control validate">
+                    <label for="form10" data-error="wrong" data-success="right">Type your password</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="section2" class="badge badge-pill orange mt-4">This is section #2</a>
+    
+    <div class="container-fluid">
+        <div>Forms:</div>
+        <div class="row ">
+
+            <div class="col">
+            <section class="form-light">
+            
+                <!--Form without header-->
+                <div class="card">
+            
+                    <div class="card-body mx-4">
+            
+                        <!--Header-->
+                        <div class="text-center">
+                            <h3 class="pink-text mb-5"><strong>Sign up</strong></h3>
+                        </div>
+            
+                        <!--Body-->
+                        <div class="md-form">
+                            <input type="text" id="Form-email2" class="form-control">
+                            <label for="Form-email2">Your email</label>
+                        </div>
+            
+                        <div class="md-form pb-3">
+                            <input type="password" id="Form-pass2" class="form-control">
+                            <label for="Form-pass2">Your password</label>
+                            <div class="form-group">
+                                <input type="checkbox" id="checkbox">
+                                <label for="checkbox" class="grey-text">Accept the<a href="#" class="blue-text"> Terms and Conditions</a></label>
+                            </div>
+                        </div>
+            
+                        <!--Grid row-->
+                        <div class="row d-flex align-items-center mb-4">
+            
+                            <!--Grid column-->
+                            <div class="col-md-3 col-md-6 text-center">
+                                <button type="button" class="btn btn-pink btn-block btn-rounded z-depth-1">Sign up</button>
+                            </div>
+                            <!--Grid column-->
+            
+                            <!--Grid column-->
+                            <div class="col-md-6">
+                                <p class="font-small grey-text d-flex justify-content-end">Have an account? <a href="#" class="blue-text ml-1"> Log in</a></p>
+                            </div>
+                            <!--Grid column-->
+            
+                        </div>
+                        <!--Grid row-->
+                    </div>
+            
+                    <!--Footer-->
+                    <div class="footer pt-3 mdb-color lighten-3">
+            
+                        <div class="row d-flex justify-content-center">
+                            <p class="font-small white-text mb-2 pt-3">or Sign up with:</p>
+                        </div>
+            
+                        <div class="row mt-2 mb-3 d-flex justify-content-center">
+                            <!--Facebook-->
+                            <a class="icons-sm fb-ic"><i class="fa fa-facebook white-text fa-lg"> </i></a>
+                            <!--Twitter-->
+                            <a class="icons-sm tw-ic"><i class="fa fa-twitter white-text fa-lg"> </i></a>
+                            <!--Google +-->
+                            <a class="icons-sm gplus-ic"><i class="fa fa-google-plus white-text fa-lg"> </i></a>
+                        </div>
+            
+                    </div>
+                    
+                </div>
+                <!--/Form without header-->
+            
+            </section>
+                                                        
+            </div>
+
+            <div class="col">
+
+            <section class="form-simple">
+                    
+                <!--Form with header-->
+                <div class="card">
+            
+                    <!--Header-->
+                    <div class="header pt-3 grey lighten-2">
+            
+                        <div class="row d-flex justify-content-start">
+                            <h3 class="deep-grey-text mt-3 mb-4 pb-1 mx-5">Log in</h3>
+                        </div>
+            
+                    </div>
+                    <!--Header-->
+            
+                    <div class="card-body mx-4 mt-4">
+            
+                        <!--Body-->
+                        <div class="md-form">
+                            <input type="text" id="Form-email4" class="form-control">
+                            <label for="Form-email4">Your email</label>
+                        </div>
+            
+                        <div class="md-form pb-3">
+                            <input type="password" id="Form-pass4" class="form-control">
+                            <label for="Form-pass4">Your password</label>
+                            <p class="font-small grey-text d-flex justify-content-end">Forgot <a href="#" class="dark-grey-text font-bold ml-1"> Password?</a></p>
+                        </div>
+            
+                        <div class="text-center mb-4">
+                            <button type="button" class="btn btn-danger btn-block z-depth-2">Log in</button>
+                        </div>
+                        <p class="font-small grey-text d-flex justify-content-center">Don't have an account? <a href="#" class="dark-grey-text font-bold ml-1"> Sign up</a></p>
+            
+                    </div>
+                
+                    </div>
+                    <!--/Form with header-->
+                
+                </section>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+        
+    <a name="section3" class="badge badge-pill orange mt-4">This is section #3</a>
+
+    <div class="container-fluid">
+            <div>Cards:</div>
+            <div class="row no-gutters">
+
+            <!--Card-->
+            <!-- <div class="col c1"> -->
+                <div class="card mr-3">
+
+                    <!--Card image-->
+                    <div class="view overlay hm-white-slight">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" class="img-fluid" alt="">
+                        <a href="#">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title">Card title</h4>
+                        <!--Text-->
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                
+                    <!--Card footer-->
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Button</a>
+                    </div>
+                </div>
+            <!-- </div> -->
+            <!--/.Card-->
+
+            <!--Card-->
+            <!-- <div class="col c2"> -->
+                <div class="card mr-3">
+
+                    <!--Card image-->
+                    <div class="view overlay hm-white-slight">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" class="img-fluid" alt="">
+                        <a href="#">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title">Card title</h4>
+                        <!--Text-->
+                        <p class="card-text">
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                            Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                    </div>
+                
+                    <!--Card footer-->
+                    <div class="card-footer">
+                            <a href="#" class="btn btn-primary">Button</a>
+                        </div>
+                    </div>
+            <!-- </div> -->
+            <!--/.Card-->
+
+            <!--Card-->
+            <!-- <div class="col"> -->
+                <div class="card mr-3">
+
+                    <!--Card image-->
+                    <div class="view overlay hm-white-slight">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" class="img-fluid" alt="">
+                        <a href="#">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title">Card title</h4>
+                        <!--Text-->
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                
+                    <!--Card footer-->
+                    <div class="card-footer">
+                            <a href="#" class="btn btn-primary">Button</a>
+                        </div>
+                    </div>
+            <!-- </div> -->
+            <!--/.Card-->
+
+            <!--Card-->
+            <!-- <div class="col"> -->
+                <div class="card mr-3">
+
+                    <!--Card image-->
+                    <div class="view overlay hm-white-slight">
+                        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%287%29.jpg" class="img-fluid" alt="">
+                        <a href="#">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+
+                    <!--Card content-->
+                    <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title">Card title</h4>
+                        <!--Text-->
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                
+                    <!--Card footer-->
+                    <div class="card-footer">
+                            <a href="#" class="btn btn-primary">Button</a>
+                        </div>
+                    </div>
+            <!-- </div> -->
+            <!--/.Card-->
+                    
+        </div>
+    </div>
+
+    <div style="height: 30vh">
+        <div class="flex-center flex-column">
+            <h1 class="animated fadeIn mb-4">Material Design for Bootstrap</h1>
+
+            <h5 class="animated fadeIn mb-3">Thank you for using our product. We're glad you're with us.</h5>
+
+            <p class="animated fadeIn text-muted">MDB Team</p>
+        </div>
+    </div>
+
+    <a name="section4" class="badge badge-pill orange mt-4">This is section #4</a>
+
+    <div class="container-fluid">
+            <div class="row no-gutters">
+                <div class="col-5">
+                    <div>Line chart:</div>
+                    <canvas id="lineChart"></canvas>
+                </div>
+                <div class="col-2">
+                </div>
+                <div class="col-5">
+                    <div>Polar chart:</div>
+                    <canvas id="polarChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a name="section5" class="badge badge-pill orange mt-4">This is section #5</a>
+    
+    <footer class="page-footer indigo center-on-small-only pt-0">
+        <!--Footer Links-->
+        <div class="container">
+            <!--First row-->
+            <div class="row">
+    
+                <!--First column-->
+                <div class="col-md-12">
+    
+                    <div class="footer-socials mb-5 flex-center">
+    
+                        <!--Facebook-->
+                        <a class="icons-sm fb-ic"><i class="fa fa-facebook fa-lg white-text mr-md-4"> </i></a>
+                        <!--Twitter-->
+                        <a class="icons-sm tw-ic"><i class="fa fa-twitter fa-lg white-text mr-md-4"> </i></a>
+                        <!--Google +-->
+                        <a class="icons-sm gplus-ic"><i class="fa fa-google-plus fa-lg white-text mr-md-4"> </i></a>
+                        <!--Linkedin-->
+                        <a class="icons-sm li-ic"><i class="fa fa-linkedin fa-lg white-text mr-md-4"> </i></a>
+                        <!--Instagram-->
+                        <a class="icons-sm ins-ic"><i class="fa fa-instagram fa-lg white-text mr-md-4"> </i></a>
+                        <!--Pinterest-->
+                        <a class="icons-sm pin-ic"><i class="fa fa-pinterest fa-lg white-text"> </i></a>
+                    </div>
+                </div>
+                <!--/First column-->
+            </div>
+            <!--/First row-->
+        </div>
+        <!--/Footer Links-->
+    
+        <!--Copyright-->
+        <div class="footer-copyright">
+            <div class="container-fluid">
+                © 2016 Copyright: <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a>
+            </div>
+        </div>
+        <!--/Copyright-->
+    
+    </footer>
+    <!--/Footer-->
+    
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+
+    <script type="text/javascript">
+        var ctxL = document.getElementById("lineChart").getContext('2d');
+        var myLineChart = new Chart(ctxL, {
+            type: 'line',
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                datasets: [
+                    {
+                        label: "My First dataset",
+                        fillColor: "rgba(220,220,220,0.2)",
+                        strokeColor: "rgba(220,220,220,1)",
+                        pointColor: "rgba(220,220,220,1)",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(220,220,220,1)",
+                        data: [65, 59, 80, 81, 56, 55, 40]
+                    },
+                    {
+                        label: "My Second dataset",
+                        fillColor: "rgba(151,187,205,0.2)",
+                        strokeColor: "rgba(151,187,205,1)",
+                        pointColor: "rgba(151,187,205,1)",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(151,187,205,1)",
+                        data: [28, 48, 40, 19, 86, 27, 90]
+                    }
+                ]
+            },
+            options: {
+                responsive: true
+            }    
+        });
+
+        //polar
+        var ctxPA = document.getElementById("polarChart").getContext('2d');
+        var myPolarChart = new Chart(ctxPA, {
+            type: 'polarArea',
+            data: {
+                labels: ["Red", "Green", "Yellow", "Grey", "Dark Grey"],
+                datasets: [
+                    {
+                        data: [300, 50, 100, 40, 120],
+                        backgroundColor: ["#F7464A", "#46BFBD", "#FDB45C", "#949FB1", "#4D5360"],
+                        hoverBackgroundColor: ["#FF5A5E", "#5AD3D1", "#FFC870", "#A8B3C5", "#616774"]
+                    }
+                ]
+            },
+            options: {
+                responsive: true
+            }    
+        });        
+
+    </script>
+</body>
+
+</html>

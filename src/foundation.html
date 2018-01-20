@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation Starter Template</title>
+    <link rel="stylesheet" href="foundationcss/foundation.css" />
+    <style>
+        .grid-x > .div-1 {
+            background: cyan;
+        } 
+        .grid-x > .div-2 {
+            background: lightblue;
+        } 
+        .grid-x > .div-3 {
+            background: lightcoral;
+        } 
+        .grid-x > .div-4 {
+            background: lightgoldenrodyellow;
+        } 
+        .grid-x > .large-4 {
+            background: lightgray;
+        } 
+        .grid-x > .large-8 {
+            background: lightgreen;
+        } 
+    </style>
+  </head>
+  <body>
+    <div class="grid-x">
+        <div class="cell div-1">full width cell</div>
+        <div class="cell div-2">full width cell</div>
+    </div>
+    <div class="grid-x">
+        <div class="small-6 cell div-3">6 cells</div>
+        <div class="small-6 cell div-4">6 cells</div>
+    </div>
+    <div class="grid-x">
+        <div class="medium-6 large-4 cell">12/6/4 cells</div>
+        <div class="medium-6 large-8 cell">12/6/8 cells</div>
+    </div>
+
+    <script src="foundationjs/vendor/jquery.js"></script>
+    <script src="foundationjs/vendor/what-input.js"></script>
+    <script src="foundationjs/vendor/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test</title>
+    <meta name="description" content="Movie Magic">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <style>
+        html {
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+            font-family: Roboto, sans-serif;
+            font-size: 13px;
+            box-sizing: border-box;
+            min-height: 100%;
+            height: 100%;
+            min-width: 100%;
+            width: 100%;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%;  
+            width: 100%;
+            /* border: 1px solid green; */
+        }
+
+        /* Top level div */
+        .app {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            /* justify-content: center;     alignment on main axis */
+            /* align-items: center;             alignment on cross axis */
+            height: 100%;
+            width: 100%;
+            border: 1px solid red;
+        }
+
+        /* Header/body/footer */
+        .header {
+            background: tomato;
+            /* min-height: 10vh; */
+            min-height: 7%;
+        }
+
+        .body {
+            /* min-height: 84vh; */
+            min-height: 90%;
+            overflow: auto;
+        }
+
+        .footer {
+            background: lightgreen;
+            /* min-height: 6vh; */
+            min-height: 3%;
+        } 
+
+        .content {
+            /* text-align: left;
+            padding: 20px 20px;
+            flex: 1;*/
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /*order: 1;  */
+        }
+
+        .aside {
+            /* width: 200px;
+            height: 100%; */
+        }
+
+        .left-navbar { 
+            /* background: lightblue;
+            order: 0; */
+        }
+
+        .right-navbar {
+            /* background: lightpink;
+            order: 2; */
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            margin: 10px; 
+            width: 280px;
+            height: 340px;
+            border: 1px solid black;
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            /* justify-content: flex-start; */
+            align-items: stretch;
+        }
+
+        .card-header {
+        }
+
+        .card-icon {
+            float: left;
+            padding: 15px 20px 0 10px; 
+        }
+
+        .card-title {
+            background: deepskyblue;
+            color:white;
+            margin: 0;
+            padding: 16px;
+            width: 100%;
+            height: 60px;
+            font-size: 1.5em;
+        }
+
+        .card-text {
+            padding: 10px;
+            /* flex: 4; */
+            /* font-family: Arial, Helvetica, sans-serif; */
+        }
+
+        .card-footer {
+            padding: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Full height sidenav div floated on right - uses vh -->
+    <div class="app">
+        <div class="header">Header!</div>
+        <div class="body">
+            <div class="content">
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><img src="/images/menu-16x16.png"></div>
+                        <div class="card-title">DFA</div>
+                    </div>
+                    <div class="card-text">
+                        <b>DoubleClick for Advertiser</b> is Google ad server platform. You can ge statistics about consumer usage such as clicks, conversions, views 
+                        across multiple dimensions such as geography, date, browsers, and devices.
+                    </div>
+                    <div class="card-footer">
+                        Next
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><img src="/images/menu-16x16.png"></div>
+                        <div class="card-title">Sizmek</div>
+                    </div>
+                    <div class="card-text">
+                        Data management platform collecting click and conversion data for advertisers.
+                    </div>
+                    <div class="card-footer">
+                            Next
+                        </div>
+                    </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><img src="/images/menu-16x16.png"></div>
+                        <div class="card-title">Sizmek</div>
+                    </div>
+                    <div class="card-text">
+                        More cookie data.
+                    </div>
+                    <div class="card-footer">
+                            Next
+                        </div>
+                    </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><img src="/images/menu-16x16.png"></div>
+                        <div class="card-title">Sizmek</div>
+                    </div>
+                    <div class="card-text">
+                        More cookie data.
+                    </div>
+                    <div class="card-footer">
+                            Next
+                    </div>
+                </div>
+
+            </div>
+            <div class="aside left-navbar">Left sidebar</div>
+            <div class="aside right-navbar">Right sidebar</div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

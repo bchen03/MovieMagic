@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test</title>
+    <meta name="description" content="Movie Magic">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <style>
+        html {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            min-height: 98%;
+            height: 98%;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+            font-size: 13px;
+            border: 1px solid green;
+            color: red;
+            height: 100%;
+        }
+
+        .app {
+            /*min-height: 815px;
+            height: 815px;*/
+        }
+
+        .app-content {
+        }
+
+        .app-columns {
+/*            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            border: 1px solid magenta;
+            min-height: 98vh;
+            height: 98vh;
+            */
+        }
+
+        .app-columns > .app-column-1 {
+            float: left;
+            width: 87%;
+        }
+
+        .app-columns > .app-column-2 {
+            float: right;
+            width: 13%;
+            height: 98vh;
+        }
+
+        .sidenav {
+            background-color: rgb(35, 47, 62);
+            height: 100%;
+        }
+
+        .sidenav .sidenav-content {
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Full height sidenav div floated on right - uses vh -->
+    <div id="app">
+        <div class="app-content">
+                <div class="app-columns">
+                    <div class="app-column-1">
+                        <div>Item 1</div> 
+                        <div>Item 2</div>                     
+                    </div>
+                    <div class="app-column-2">
+                        <div class="sidenav">
+                            <div class="sidenav-content">
+                                Side 1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

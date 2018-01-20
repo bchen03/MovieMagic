@@ -11,11 +11,12 @@ var config = {
     output: {
         path: DIST_DIR,
         //filename: "bundle.[hash].js",
-        filename: "bundle.js"
-        //,publicPath: "/"
+        filename: "bundle.js",
+        publicPath: "/"
     },
     devServer: {
-        contentBase: DIST_DIR,
+        contentBase: SRC_DIR,
+        publicPath: "/",
         compress: true,
         stats: "errors-only",   // Only show error messages
         open: true,             // Opens new browser window when running dev server for first time
@@ -47,6 +48,17 @@ var config = {
                     use: ["css-loader", "sass-loader"],
                     publicPath: "/dist"
                 })
+            },
+            { 
+                test: /\.(jpg|png|gif|svg)$/, 
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: "/images/[name].[ext]"
+                        }  
+                    }
+                ]
             }
         ]
     },

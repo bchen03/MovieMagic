@@ -4,12 +4,11 @@
 
 Some resources for learning webpack: 
 
-* On Youtube, look at videos by IHateTomatoes.
-
+On Youtube, look at videos by IHateTomatoes.
 
 ### Basic setup for React/Webpack app:
 
-* Create app folder, initialize npm, and install webpack locally:
+Create app folder, initialize npm, and install webpack locally:
 
 ```
 md MovieMagic & cd MovieMagic
@@ -17,7 +16,7 @@ npm init -y
 npm install --save-dev webpack
 ``` 
 
-* Now setup the directory structure:
+Now setup the directory structure:
 
 ```
 MovieMagic
@@ -38,9 +37,7 @@ console.log('Hello World!');
 
 Then run: 
 
-```
-webpack ./src/index.js ./dist/bundle.js
-```
+```webpack ./src/index.js ./dist/bundle.js```
 
 If you open ```dist/bundle.js``` and you should see the ```console.log()```. 
 
@@ -48,12 +45,9 @@ If you open ```dist/bundle.js``` and you should see the ```console.log()```.
 
 ```--watch``` to automatically re-run webpack when ```index.js``` changes.  
   
-  
-* Instead of typing webpack commands on the command-line, let's create a webpack configuration file:
+Instead of typing webpack commands on the command-line, let's create a webpack configuration file:
 
-```
-type NUL > webpack.config.js
-```
+```type NUL > webpack.config.js```
 
 and initialize:
 
@@ -75,7 +69,7 @@ var config = {
 module.exports = config;
 ```
 
-* Let's also add scripts to package.json to run webpack:
+Let's also add scripts to package.json to run webpack:
 
 ```
 {
@@ -105,7 +99,7 @@ To load webpage in browser:
 ```file:///C:/dev/MovieMagic/dist/index.html```
 
 
-* html-webpack-plugin
+### html-webpack-plugin
 
 This plugin will generate  an index.html file automatically. Here's the link: https://github.com/jantimon/html-webpack-plugin
 
@@ -149,7 +143,7 @@ Here's the ```index.ejs``` template file (ejs = embedded javascript):
 </html>
 ```
 
-* CSS-loader, style-loader, sass-loader, node-sass, extract-text-webpack-plugin
+### CSS-loader, style-loader, sass-loader, node-sass, extract-text-webpack-plugin
 
 To add styling to the webpack bundle, first install css-loader, style-loader, sass-loader, and node-sass:
 
@@ -183,9 +177,7 @@ Since ```style-loader``` creates an inline ```<style>```, to move the styles int
 
 First install the plugin:
 
-```
-npm install --save-dev extract-text-webpack-plugin
-```
+``` npm install --save-dev extract-text-webpack-plugin```
 
 Then add to webpack.config.js:
 
@@ -217,13 +209,11 @@ plugins: [
 
 ```
 
-* Webpack dev server
+### Webpack dev server
 
 To run using webpack's dev server, first install:
 
-```
-npm install --save-dev webpack-dev-server
-```
+```npm install --save-dev webpack-dev-server```
 
 Then change ```package.json``` npm script to:
 
@@ -251,7 +241,7 @@ devServer: {
 },
 ```
 
-* Installing React and Babel
+### React and Babel
 
 Install React and Babel:
 
@@ -310,4 +300,28 @@ ReactDOM.render(
     document.getElementById('root')
   );
 ```
+
+### Rimraf
+
+This is an NPM package to clean out a folder such as /dist 
+
+To install:
+
+```npm install --save-dev rimraf```
+
+Then change package.json:
+
+```
+"scripts": {
+"prod": "npm run clean && webpack -p",
+"clean": "rimraf ./dist/*"
+}
+```
+
+The ```clean``` script deletes all files in the /dist folder. The ```prod``` script runs the ```clean``` script before running webpack.
+
+
+### Loading images
+
+```npm install --save-dev file-loader image-webpack-loader```
 
