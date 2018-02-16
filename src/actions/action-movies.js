@@ -19,7 +19,7 @@ export const receiveMovies = (json) => {
 export const fetchMovies = () => {
     console.log("fetchMovies");
     return function(dispatch) {
-        dispatch(requestMovies);
+        dispatch(requestMovies());
         return fetch("http://localhost:8083/api/v1/movies/homepage")
             .then(
                 response => response.json(), 
