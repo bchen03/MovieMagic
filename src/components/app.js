@@ -9,6 +9,8 @@ import { Sidenav } from './sidenav';
 import Movies from './movies';
 import { MoviePanel } from './moviepanel';
 
+import { Grid, GridRow, GridHeader } from './grid';     // Use children API
+
 // import {fetchMovies} from '../actions/action-movies';
 
 export class App extends React.Component {
@@ -126,16 +128,28 @@ export class App extends React.Component {
                 <SwimLane />
                 <div className="app-content">
                     <div className="app-columns">
-
                         <Movies />
-                        
                         {/* {this.renderMoviePanels()} */}
-
                         <div className="app-column-side">
                             <Sidenav />
                         </div>
                     </div>
+
+                    <div className="app-columns">
+                        <div className="py-3">
+                            <Grid>
+                                <GridHeader>
+                                    { () => <h3>Rows below!</h3> }
+                                </GridHeader>
+                                <GridRow name="Row 1">This is Row 1</GridRow>
+                                <GridRow name="Row 2">This is Row 2</GridRow>
+                                <GridRow name="Row 3">This is Row 3</GridRow>
+                                <GridRow name="Row 4">This is Row 4</GridRow>
+                            </Grid>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         );
     }
