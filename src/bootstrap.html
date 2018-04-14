@@ -61,6 +61,10 @@
         width: 370px;
       }
 
+      .img-panel {
+          background: salmon;
+      }
+
       /* Cards */
       /* .card {
           background: white;
@@ -107,8 +111,15 @@
       <header class="row">
         Header
       </header>
-      <main class="row">
 
+      <!-- use mouseover/mouseout events to change image -->
+      <div class="row img-panel">
+        <img src="/images/from-russia-with-love.jpg" width="200" height="200" alt="russia" onmouseover="this.src='/images/carlitos-way.jpg'" onmouseout="this.src='/images/from-russia-with-love.jpg'">
+        <img src="/images/phantom-menace.jpg" width="200" height="200" alt="russia" onmouseover="this.src='/images/the-exorcist.jpg'" onmouseout="this.src='/images/phantom-menace.jpg'">
+        <img src="/images/the-godfather.jpg" width="200" height="200" alt="russia" onmouseover="this.src='/images/the-omen.jpg'" onmouseout="this.src='/images/the-godfather.jpg'">
+      </div>
+
+      <main class="row">
           <div class="card">
             <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg" alt="Card image cap">
             <div class="card-body text-center">
